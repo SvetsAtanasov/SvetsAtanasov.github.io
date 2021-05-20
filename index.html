@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="Application/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <div class="home" id="home">
+
+        <div class="table" id="table">
+            <nav class="navBar" id="navBar">
+                <ul>
+                    <li><a><button onclick="ScrollToTop()">Home</button></a></li>
+                    <li><a><button onclick="ScrollToTop()">About Me</button></a></li>
+                    <li><a><button onclick="ScrollToDivProjects()">Projects</button></a></li>
+                    <li><a><button onclick="ScrollToDivContactMe()">Contact Me</button></a></li>
+                </ul>
+         </nav>
+        </div>
+
+        <p>Hello, I am <span>Svetoslav Atanasov</span>.
+        <br> I am a back and front end developer. </p>
+    </div>
+    
+    <div class="aboutMe" id="aboutMe">    
+        <div class="mockup" id="mockup">
+            <div class="topParts">
+                <img src="https://d1xm195wioio0k.cloudfront.net/images/mockup/macbook-top.svg" alt="" class="top">
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+                <img src="https://d1xm195wioio0k.cloudfront.net/images/mockup/macbook-cover.svg" alt="" class="cover">
+            </div>
+
+            <div class="bottomParts">
+                <img src="https://d1xm195wioio0k.cloudfront.net/images/mockup/macbook-bottom.svg" alt="" class="bottom">
+            </div>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <h1 class="header">Projects</h1> 
+        <div><button onclick="OpenProject1()">Project1</button></div>
+        <div><button>Project2</button></div>
+        <div>Project3</div>
+        <div>Project4</div>
+        <div>Project5</div>
+        <div>Project6</div>
+    </div>
+
+
+    <div class="contactMe" id="contactMe">
+        Contact Me
+    </div>
+
+    <script>AOS.init()</script>
+
+</body>
+
+</html>
