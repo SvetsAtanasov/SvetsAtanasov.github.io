@@ -21,9 +21,8 @@ body{
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
-
+    padding: 150px;
     margin: auto;
-    padding:10%;
 }
 
 .home span{
@@ -54,7 +53,7 @@ ul{
     background-color: #1b2735;
   }
 
-  li{
+  .navBar li{
     display: inline;
     position:relative;
 
@@ -181,19 +180,18 @@ ul{
     grid-column-end: 4;
 }
 
+.projects button{
+    background-color: transparent;
+    border: solid;
+    cursor: pointer;
+
+    width: 100%;
+    height: 100%;
+}
+
 .contactMe{
     width: 100vw;
     height: 100vh;
 
     text-align: center;
-}
-
-.projects button{
-    background-color: transparent;
-    border: solid;
-
-    cursor: pointer;
-
-    width: 100%;
-    height: 100%;
 }
