@@ -10,8 +10,8 @@ function ScrollToDivContactMe(){
 }
 
 function ScrollToTop(){
-    var element = document.getElementById('aboutMe');
-    element.scrollIntoView();
+    var element = document.getElementById('aboutMe').clientHeight - document.getElementById('navBar').clientHeight;
+    window.scrollTo(0, element);
 }
 
 function OpenProject1(){
