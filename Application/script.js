@@ -1,17 +1,20 @@
 //#region OnClickFunctions
+function ScrollToAboutMe(){
+    var scrollOffset = document.getElementById('aboutMe').offsetTop - document.getElementById('navBar').clientHeight;
+    var scroll = window.scrollY;
+    window.scrollTo(scroll, scrollOffset);
+}
+
 function ScrollToDivProjects(){
-    var element = document.getElementById('projects');
-    element.scrollIntoView();
+    var scrollOffset = document.getElementById('projects').offsetTop - document.getElementById('navBar').clientHeight;
+    var scroll = window.scrollY;
+    window.scrollTo(scroll, scrollOffset);
 }
 
 function ScrollToDivContactMe(){
-    var contactMeDiv = document.getElementById('contactMe');
-    contactMeDiv.scrollIntoView();
-}
-
-function ScrollToTop(){
-    var element = document.getElementById('aboutMe').clientHeight - document.getElementById('navBar').clientHeight;
-    window.scrollTo(0, element);
+    var scrollOffset = document.getElementById('contactMe').offsetTop - document.getElementById('navBar').clientHeight;
+    var scroll = window.scrollY;
+    window.scrollTo(scroll, scrollOffset);
 }
 
 function OpenProject1(){
