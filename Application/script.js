@@ -32,14 +32,46 @@ function ScrollToDivContactMe(){
 
     ScrollTo(elementOffsetY, elementY);
 }
+//#endregion
 
+//#region Open Pages (Projects)
 function OpenProject1(){
     window.location.href = 'Projects/ARDesigner.html';
 }
 //#endregion
 
+//#region Section Scroll Button Focus
 function SectionFocus(){
+    var scroll = window.scrollY;
+
+    var aboutMe = document.getElementById('aboutMe');
+    var projects = document.getElementById('projects');
+    var contactMe = document.getElementById('contactMe');
+
+    var btnHome = document.getElementById('btnHome');
+    var btnAboutMe = document.getElementById('btnAboutMe');
+    var btnProjects = document.getElementById('btnProjects');
+    var btnContactMe = document.getElementById('btnContactMe');
+
+
+
+    if(scroll < aboutMe.offsetTop){
+        btnHome.focus();
+    }
+
+    else if(scroll >= aboutMe.offsetTop && scroll < projects.offsetTop){
+        btnAboutMe.focus();
+    }
+
+    else if(scroll >= projects.offsetTop && scroll < contactMe.offsetTop){
+        btnProjects.focus();
+    }
+
+    else{
+        btnContactMe.focus();
+    }
 }
+//#endregion
 
 addEventListener('scroll', SectionFocus);
 
