@@ -1,26 +1,47 @@
 //#region OnClickFunctions
-function ScrollToAboutMe(){
-    var scrollOffset = document.getElementById('aboutMe').offsetTop - document.getElementById('navBar').clientHeight;
+function ScrollTo(element1OffsetY, element2Y){
     var scroll = window.scrollY;
-    window.scrollTo(scroll, scrollOffset);
+    var offset = element1OffsetY - element2Y;
+
+    window.scrollTo(scroll, offset);
+}
+
+function ScrollToTop(){
+    var elementHome = document.getElementById('home');
+    elementHome.scrollIntoView();
+}
+
+function ScrollToAboutMe(){
+    var elementOffsetY = document.getElementById('aboutMe').offsetTop;
+    var elementY = document.getElementById('navBar').clientHeight;
+    
+    ScrollTo(elementOffsetY, elementY);
 }
 
 function ScrollToDivProjects(){
-    var scrollOffset = document.getElementById('projects').offsetTop - document.getElementById('navBar').clientHeight;
-    var scroll = window.scrollY;
-    window.scrollTo(scroll, scrollOffset);
+    var elementOffsetY = document.getElementById('projects').offsetTop;
+    var elementY = document.getElementById('navBar').clientHeight;
+
+    ScrollTo(elementOffsetY, elementY);
 }
 
 function ScrollToDivContactMe(){
-    var scrollOffset = document.getElementById('contactMe').offsetTop - document.getElementById('navBar').clientHeight;
-    var scroll = window.scrollY;
-    window.scrollTo(scroll, scrollOffset);
+    var elementOffsetY = document.getElementById('contactMe').offsetTop
+    var elementY = document.getElementById('navBar').clientHeight;
+    document.getElementById('btnHome').focus();
+
+    ScrollTo(elementOffsetY, elementY);
 }
 
 function OpenProject1(){
     window.location.href = 'Projects/ARDesigner.html';
 }
 //#endregion
+
+function SectionFocus(){
+}
+
+addEventListener('scroll', SectionFocus);
 
 document.addEventListener('DOMContentLoaded', () => {
     let elements = new Array();
@@ -41,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function FindElements(e){
+    /*function FindElements(e){
         let el = document.elementFromPoint(e.clientX, e.clientY);
         console.log(el);
 
@@ -49,5 +70,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(elements);
     }
 
-    document.addEventListener('mouseover',FindElements);
+    document.addEventListener('mouseover',FindElements);*/
 });

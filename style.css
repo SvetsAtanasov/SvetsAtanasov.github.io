@@ -78,8 +78,7 @@ ul{
       z-index: 1;
       position: fixed;
       padding: 0px;
-      width: 100vw;
-      top:0px;
+      top: 0px;
   }
 
  .navBar button {
