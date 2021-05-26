@@ -28,7 +28,6 @@ function ScrollToDivProjects(){
 function ScrollToDivContactMe(){
     var elementOffsetY = document.getElementById('contactMe').offsetTop
     var elementY = document.getElementById('navBar').clientHeight;
-    document.getElementById('btnHome').focus();
 
     ScrollTo(elementOffsetY, elementY);
 }
@@ -42,9 +41,8 @@ function OpenProject1(){
 
 //#region Section Scroll Button Focus
 function SectionFocus(){
-    var pageOffset = window.pageYOffset + navBar.clientHeight;
-
-    var navBar = document.getElementById('navBar');
+   
+    var navBar = document.getElementById('navBar').clientHeight;
     var aboutMe = document.getElementById('aboutMe');
     var projects = document.getElementById('projects');
     var contactMe = document.getElementById('contactMe');
@@ -53,6 +51,8 @@ function SectionFocus(){
     var btnAboutMe = document.getElementById('btnAboutMe');
     var btnProjects = document.getElementById('btnProjects');
     var btnContactMe = document.getElementById('btnContactMe');
+
+    var pageOffset = window.pageYOffset + navBar;
     
     if(pageOffset < aboutMe.offsetTop){
         btnHome.focus();
@@ -72,7 +72,7 @@ function SectionFocus(){
 }
 //#endregion
 
-addEventListener('scroll', SectionFocus);
+addEventListener('wheel', SectionFocus);
 
 document.addEventListener('DOMContentLoaded', () => {
     let elements = new Array();
