@@ -42,8 +42,9 @@ function OpenProject1(){
 
 //#region Section Scroll Button Focus
 function SectionFocus(){
-    var scroll = window.scrollY;
+    var pageOffset = window.pageYOffset + navBar.clientHeight;
 
+    var navBar = document.getElementById('navBar');
     var aboutMe = document.getElementById('aboutMe');
     var projects = document.getElementById('projects');
     var contactMe = document.getElementById('contactMe');
@@ -52,18 +53,16 @@ function SectionFocus(){
     var btnAboutMe = document.getElementById('btnAboutMe');
     var btnProjects = document.getElementById('btnProjects');
     var btnContactMe = document.getElementById('btnContactMe');
-
-
-
-    if(scroll < aboutMe.offsetTop){
+    
+    if(pageOffset < aboutMe.offsetTop){
         btnHome.focus();
     }
 
-    else if(scroll >= aboutMe.offsetTop && scroll < projects.offsetTop){
+    else if(pageOffset >= aboutMe.offsetTop && pageOffset < projects.offsetTop){
         btnAboutMe.focus();
     }
 
-    else if(scroll >= projects.offsetTop && scroll < contactMe.offsetTop){
+    else if(pageOffset >= projects.offsetTop && pageOffset < contactMe.offsetTop){
         btnProjects.focus();
     }
 
