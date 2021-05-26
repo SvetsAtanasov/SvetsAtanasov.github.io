@@ -103,4 +103,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('mouseover',FindElements);*/
+
+
+    function CreateElement(){
+        var name = 'projects';
+        var element = new Element(name);
+        console.log(element.getElement());
+    }
+
+    CreateElement();
 });
+
+class Element{
+    constructor(name){
+        this.name = name;
+    }
+
+    getElement(){
+        let element = document.getElementById(this.name).offsetTop;
+
+        return element;
+    }
+}
