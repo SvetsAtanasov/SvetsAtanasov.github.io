@@ -107,20 +107,27 @@ document.addEventListener('DOMContentLoaded', () => {
     function CreateElement(){
         var name = 'projects';
         var element = new Element(name);
-        console.log(element.getElement());
+        console.log(element.GetClientHeight());
     }
 
     CreateElement();
 });
 
 class Element{
-    constructor(name){
-        this.name = name;
+    constructor(elementName){
+        this.elementName = elementName;
     }
 
-    getElement(){
-        let element = document.getElementById(this.name).offsetTop;
+    GetElement(){
+        let element = document.getElementById(this.elementName);
 
         return element;
+    }
+
+    GetClientHeight(){
+        var element = this.GetElement();
+        var elHeight = element.clientHeight;
+
+        return elHeight;
     }
 }
