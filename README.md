@@ -1,2 +1,0 @@
-# SvetsAtanasov.github.io
-Portfolio

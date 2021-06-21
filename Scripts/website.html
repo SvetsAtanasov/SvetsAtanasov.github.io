@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>WebPage</title>
+
+<script src="/logic.js"></script>
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="Wrapper">
+        <div class="NavRectangle" id="NavRectangle">
+            <a href="#collapse" class="Icon" onclick="Expand()">
+                <i class="fa fa-bars"></i>
+            <a href="#Contact" class="Contact" id="Contact">Contact Us</a>
+            <a href="#Search">Search</a>
+            <a href="#About">About</a>
+        </a>
+        </div>
+    
+        <div class="HomeSection" id="HomeSection">
+            <img src="/Images/RidgeMaxWidth1024px.png" class="RidgeMax">
+            <img src="/Images/RidgeMinWidth1024.png" class="RidgeMin">
+            
+            <h1 class="Slogan">Scale and capability <br> with a personal <br> touch</h1>
+        </div>
+    
+        <div class="HelpSection" id="HelpSection">
+            <h1>How can we help?</h1>
+            <div class="CarouselWrapper"> <!--Give max-width-->
+                <div class="ButtonWrapper">                
+                <button onclick="Increment(1)">
+                    
+                </button>
+                
+                <button onclick="Increment(-1)">
+                    
+                </button>
+            </div>
+
+            <div class="SlideWrapper" id="SlideWrapper">                
+                <div class="Slide" id="Slide">
+                    <div class="GreenBar"></div>
+                    <button>
+                        <h1>Plan a project</h1>
+                    </button>
+                </div>
+
+                <div class="Slide1" id="Slide1">
+                    <div class="GreenBar"></div>
+                    <button>
+                        <h1>Find a framework</h1>
+                    </button>
+                </div>
+
+                <div class="Slide2" id="Slide2">
+                    <div class="GreenBar"></div>
+                    <button>
+                        <h1>Get a procurement strategy</h1>
+                    </button>
+                </div>
+
+                <div class="Slide3" id="Slide3">
+                    <div class="GreenBar"></div>
+                    <button>
+                        <h1>Sustainability advice</h1>
+                    </button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

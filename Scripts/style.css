@@ -1,0 +1,409 @@
+/*#region Fonts*/
+@font-face {
+    font-family: firstFont;
+    src: url(/Fonts/RopaSans-Regular.ttf);
+}
+/*#endregion*/
+
+/*#region Transition before 1024px*/
+@media screen and (max-width: 1024px){
+    body{
+        margin: 0;
+    }
+
+/*#region NavRectangle*/
+.RidgeMax{
+    position: absolute;
+    top: 20px;
+}
+
+.RidgeMin{
+    display: none;
+}
+
+    .NavRectangle{
+        height: 50px;
+
+        background-color: white;
+    }
+
+    .NavRectangle a{
+        float: right;
+        margin-top: 15px;
+        padding: 5px 10px;
+
+        text-decoration: none;
+        font-size: 24pt;
+        font-family: firstFont;
+        color: black;
+
+        border-top-left-radius: 10px ;
+        border-top-right-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+        border-bottom-left-radius: 10px ;
+    }
+
+    .NavRectangle a.Icon{
+        float: right;
+        display: block;
+    }
+
+    .NavRectangle.Responsive a.Icon{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .NavRectangle a{
+        display: none;
+    }
+
+    .NavRectangle.Responsive a:not(:first-child){
+        position: relative; 
+        display: block;
+        float: none;
+
+        top: 155%;
+        
+        margin-top: 0px;
+        margin-left: auto;
+
+        padding: 0px;
+        width: 200px;
+
+        background-color: white;
+        text-decoration: none;
+        text-align: center;
+
+        border-top-left-radius:0px;
+        border-top-right-radius:0px;
+        border-bottom-right-radius:0px;
+        border-bottom-left-radius:0px;
+
+        border-style: solid;
+        border-color: black;
+        border-width: 1px;
+
+        animation: expand 250ms forwards;
+    }
+
+    .NavRectangle.Responsive a:focus{
+        background-color: grey;
+    }
+
+     .NavRectangle.Responsive a:nth-child(1){
+        position: absolute;
+    }
+
+    @keyframes expand {
+        from{
+           height: 0px;
+           opacity: 0;
+           color: transparent;
+        }
+
+        to{
+            height: 40px;
+            opacity: 1;
+            color:inherit;
+        }
+    }
+/*#endregion*/
+
+/*#region HomeSection*/
+    .HomeSection{
+       height: 50vh;
+       min-height: 480px;
+
+        background-image: url(/Images/wallpaperflare.com_wallpaper.png);
+        background-position: center;
+    }
+
+    .HomeSection h1{
+        position: relative;
+        top: 50%;
+        
+        margin-left: 25px;
+
+        font-size: 30pt;
+        font-family: firstFont;
+        color: white;
+    }
+/*#endregion*/
+
+/*#region HelpSection*/
+    .HelpSection{
+        height: 50vh;
+        min-height: 480px;
+        
+        background-color: rgb(85, 85, 85);
+    }
+
+    .HelpSection h1{
+        position: absolute;
+        margin-left: 25px;
+        color: white;
+        font-family: firstFont;
+    }
+
+    .SlideWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .SlideWrapper div:nth-child(2),
+    .SlideWrapper div:nth-child(3),
+    .SlideWrapper div:nth-child(4){
+        display: none;
+    }
+
+    .Slide,
+    .Slide1,
+    .Slide2,
+    .Slide3{
+        display: inline-block;
+        margin-top: 100px;
+        margin-left: 70px;
+
+        width: 300px;
+        height: 200px;
+    }
+
+    .GreenBar{
+        position:relative;
+        width: 300px;
+        height: 5px;
+        background-color:green;
+    }
+
+    .Slide button,
+    .Slide1 button,
+    .Slide2 button,
+    .Slide3 button{
+        position: relative;
+        float: left;
+
+        height: 200px;
+        width: 300px;
+
+        background-color: rgb(117, 117, 117);
+        border: none;
+    }
+
+    .Slide h1,
+    .Slide1 h1,
+    .Slide2 h1,
+    .Slide3 h1{
+        position: absolute;
+        margin-top: -90px;
+        
+        text-align: left;
+        font-family: firstFont;
+        font-size: 22pt;
+    }
+
+    .ButtonWrapper button{
+        position: relative;
+        display: inline;
+        float: right;
+
+        height: 75px;
+        width: 35px;
+    
+        background-repeat: no-repeat;
+        background-position: center;
+
+        z-index: 1;
+    }
+    
+    .ButtonWrapper button:nth-child(1){
+        background:url("/Images/RightArrow.png");
+        left: 0px;
+    }
+
+    .ButtonWrapper button:nth-child(2){
+        background:url("/Images/LeftArrow.png");
+        top: -2px;
+        right: 50px ;
+    }
+
+    .ButtonWrapper button:nth-child(1):active,
+    .ButtonWrapper button:nth-child(2):active{
+        background-color:darkgrey;
+        transition: background-color 250ms;
+    }
+
+    .ButtonWrapper button:nth-child(1),
+    .ButtonWrapper button:nth-child(2){
+        text-decoration: none;
+        background-repeat: no-repeat;
+        border: none;
+    }
+/*#endregion*/
+}
+/*#endregion*/
+
+/*#region Transition after 1024px*/
+    @media screen and (min-width: 1025px){
+
+        body{
+            margin: 0px;
+        }
+/*#region NavBar*/
+
+.RidgeMin{
+    position: absolute;
+    top: 20px;
+}
+
+.RidgeMax{
+    display: none;
+}
+
+        .NavRectangle{
+            height: 50px;
+            width: 2560px;
+            background-color: white;
+            margin-top: 10px;
+        }
+    
+        .NavRectangle .Icon{
+            display: none;
+        }
+    
+        .NavRectangle a{
+            display: inline;
+            float: right;
+            padding: 15px 30px;
+
+            text-align: center;
+            text-decoration: none;
+            font-size: 25pt;
+            font-family: firstFont;
+    
+            color: black;
+    
+            background-color: white;
+            transition: background-color 500ms;
+    
+            border-top-left-radius: 10px ;
+            border-top-right-radius: 10px ;
+            border-bottom-right-radius: 10px ;
+            border-bottom-left-radius: 10px ;
+        }    
+    
+        .NavRectangle a:hover{
+            background-color: rgba(100, 100, 100, 50%);
+            transition-duration: background-color 500ms;
+        }
+/*#endregion*/
+
+/*#region HomeSection*/
+        .HomeSection{
+            height: 50vh;
+            width: 2560px;
+     
+             background-image: url(/Images/wallpaperflare.com_wallpaper.png);
+             background-position: center;
+         }
+     
+         .HomeSection h1{
+             position: relative;
+             top: 50%;
+             
+             margin-left: 25px;
+     
+             font-size: 30pt;
+             font-family: firstFont;
+             color: white;
+         }
+/*#endregion*/
+
+/*#region HelpSection*/
+
+         .HelpSection{
+             position: relative;
+            height: 50vh;
+            width: 2560px;
+
+            background-color: rgb(85, 85, 85);
+        }
+    
+        .HelpSection h1{
+            position: absolute;
+            margin-left: 25px;
+            color: white;
+
+            font-family: firstFont;
+        }
+    
+        .SlideWrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .Slide,
+        .Slide1,
+        .Slide2,
+        .Slide3{
+            position: relative;
+            display:inline;
+            top: 175px;
+            padding: 5px;
+
+            width: 300px;
+            height: 200px;
+        }
+    
+        .GreenBar{
+            position:relative;
+            width: 300px;
+            height: 5px;
+            background-color:green;
+        }
+    
+        .Slide button,
+        .Slide1 button,
+        .Slide2 button,
+        .Slide3 button{
+            position: absolute;
+    
+            height: 200px;
+            width: 300px;
+    
+            background-color: rgb(117, 117, 117);
+            text-decoration: none;
+            border: none;
+        }
+    
+        .Slide h1,
+        .Slide1 h1,
+        .Slide2 h1,
+        .Slide3 h1{
+            position: absolute;
+            margin-top: -90px;
+            
+            text-align: left;
+            font-size: 22pt;
+
+            font-family: firstFont;
+        }
+
+        .ButtonWrapper{
+            display: none;
+        }
+    } 
+
+        .Slide button:hover,
+        .Slide1 button:hover,
+        .Slide2 button:hover,
+        .Slide3 button:hover{
+            cursor: pointer;
+            background-color: darkgrey;
+            transition:background-color 500ms;
+        }
+    /*#endregion*/
+    
+/*#endregion*/
