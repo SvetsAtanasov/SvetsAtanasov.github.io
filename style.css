@@ -84,6 +84,8 @@
         border-color: black;
         border-width: 1px;
 
+        z-index: 1;
+
         animation: expand 250ms forwards;
     }
 
