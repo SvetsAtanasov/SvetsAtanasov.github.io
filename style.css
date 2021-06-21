@@ -247,6 +247,7 @@
 /*#region Transition after 1024px*/
     @media screen and (min-width: 1025px){
 
+
         body{
             margin: 0px;
         }
@@ -263,7 +264,6 @@
 
         .NavRectangle{
             height: 50px;
-            width: 2560px;
             background-color: white;
             margin-top: 10px;
         }
@@ -273,11 +273,9 @@
         }
     
         .NavRectangle a{
-            display: inline;
             float: right;
             padding: 15px 30px;
 
-            text-align: center;
             text-decoration: none;
             font-size: 25pt;
             font-family: firstFont;
@@ -302,7 +300,10 @@
 /*#region HomeSection*/
         .HomeSection{
             height: 50vh;
-            width: 2560px;
+            width: 100%;
+
+            max-width: 2560px;
+            min-width: 1080px;
      
              background-image: url(/Images/wallpaperflare.com_wallpaper.png);
              background-position: center;
@@ -325,7 +326,10 @@
          .HelpSection{
              position: relative;
             height: 50vh;
-            width: 2560px;
+            width:  100%;
+
+            max-width: 2560px;
+            min-width: 1080px;
 
             background-color: rgb(85, 85, 85);
         }
@@ -349,17 +353,13 @@
         .Slide2,
         .Slide3{
             position: relative;
-            display:inline;
             top: 175px;
-            padding: 5px;
-
-            width: 300px;
-            height: 200px;
+            padding: 4px;
         }
     
         .GreenBar{
             position:relative;
-            width: 300px;
+            width: 250px;
             height: 5px;
             background-color:green;
         }
@@ -371,7 +371,7 @@
             position: absolute;
     
             height: 200px;
-            width: 300px;
+            width: 250px;
     
             background-color: rgb(117, 117, 117);
             text-decoration: none;
