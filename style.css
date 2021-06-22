@@ -115,6 +115,7 @@
 /*#region HomeSection*/
     .HomeSection{
        height: 50vh;
+       width: 100%;
        min-height: 480px;
 
         background-image: url(/Images/wallpaperflare.com_wallpaper.png);
@@ -136,6 +137,7 @@
 /*#region HelpSection*/
     .HelpSection{
         height: 50vh;
+        width: 100%;
         min-height: 480px;
         
         background-color: rgb(85, 85, 85);
@@ -301,11 +303,14 @@
 
 /*#region HomeSection*/
         .HomeSection{
-            height: 50vh;
+            height: auto;
             width: 100%;
 
             max-width: 2560px;
             min-width: 1080px;
+
+            min-height: 480px;
+            max-height: 1440px;
      
              background-image: url(/Images/wallpaperflare.com_wallpaper.png);
              background-position: center;
@@ -313,7 +318,7 @@
      
          .HomeSection h1{
              position: relative;
-             top: 50%;
+             top: 250px;
              
              margin-left: 25px;
      
@@ -326,12 +331,14 @@
 /*#region HelpSection*/
 
          .HelpSection{
-             position: relative;
-            height: 50vh;
+            height: auto;
             width:  100%;
 
             max-width: 2560px;
             min-width: 1080px;
+
+            min-height: 480px;
+            max-height: 1440px;
 
             background-color: rgb(85, 85, 85);
         }
