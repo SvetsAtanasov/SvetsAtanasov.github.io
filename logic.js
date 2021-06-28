@@ -42,3 +42,18 @@ function Slides(n) {
   currentSlide = GetElement(slides[slideIndex - 1]);
   currentSlide.display = "inline";
 }
+
+document.addEventListener("mouseover", () =>{
+    
+    function FindElements(e){
+        e = window.event;
+        var x = e.clientX;
+        var y = e.clientY;
+
+        var el = document.elementFromPoint(x,y);
+
+        console.log(el);
+    }
+
+    FindElements();
+});
